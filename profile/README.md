@@ -1,26 +1,3 @@
-
-set -e
-
-ORG="david-ai-labs"
-DIR="$HOME/david-labs-profile-update"
-
-# Check GitHub authentication
-gh auth status
-
-# Clone the existing organization profile
-if [ -d "$DIR" ]; then
-  echo "Directory already exists: $DIR"
-  echo "Remove or rename it before continuing."
-  exit 1
-fi
-
-gh repo clone "$ORG/.github" "$DIR"
-cd "$DIR"
-
-mkdir -p profile/assets
-
-# Update the organization profile
-cat > profile/README.md <<'EOF'
 # DAVID AI Labs
 
 ### Engineering in the Open.
