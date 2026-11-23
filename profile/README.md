@@ -1,15 +1,15 @@
-# DAVID AI Labs
+# Welcome to DAVID AI Labs
 
-### Engineering in the Open.
+![DAVID AI Engineering Lab](./DAVID_AI_Labs_GitHub_Banner.jpg)
 
-**Research. Systems. Experiments.**
+## Engineering in the Open.
 
 DAVID AI Labs is the public engineering initiative
-of DAVID AI, an AI strategy and engineering firm.
+of DAVID AI.
 
-We develop and share technical research, reproducible
-experiments, reference architectures, and open-source
-tools for building reliable AI systems.
+We publish research, reproducible experiments,
+reference architectures, and open-source tools
+for building reliable enterprise AI systems.
 
 [**DAVID AI**](https://david.partners) ·
 [**Research & Insights**](https://david.partners/research)
