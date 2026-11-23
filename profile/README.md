@@ -1,6 +1,7 @@
 # Open Engineering by DAVID AI
 
-![DAVID AI Labs](../DAVID_AI_Labs_GitHub_Banner.jpg)
+![DAVID AI Labs](../DAVID_AI_Labs_Open_Engineering_Banner_Compressed.jpg
+)
 
 DAVID AI Labs is the public engineering initiative of DAVID AI, an AI strategy and engineering firm.
 
