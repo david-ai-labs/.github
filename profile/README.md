@@ -1,6 +1,6 @@
 # Welcome to DAVID AI Labs
 
-![DAVID AI Engineering Lab](./DAVID_AI_Labs_GitHub_Banner.jpg)
+![DAVID AI Labs Engineering Banner](../DAVID_AI_Labs_GitHub_Banner.jpg)
 
 ## Engineering in the Open.
 
