@@ -1,47 +1,122 @@
+
+set -e
+
+ORG="david-ai-labs"
+DIR="$HOME/david-labs-profile-update"
+
+# Check GitHub authentication
+gh auth status
+
+# Clone the existing organization profile
+if [ -d "$DIR" ]; then
+  echo "Directory already exists: $DIR"
+  echo "Remove or rename it before continuing."
+  exit 1
+fi
+
+gh repo clone "$ORG/.github" "$DIR"
+cd "$DIR"
+
+mkdir -p profile/assets
+
+# Update the organization profile
+cat > profile/README.md <<'EOF'
 # DAVID AI Labs
 
-### From first principles to production.
+### Engineering in the Open.
 
-DAVID AI Labs is the public engineering laboratory of DAVID AI, an AI strategy and engineering firm.
+**Research. Systems. Experiments.**
 
-We investigate the systems, architectures, and engineering practices required to deploy reliable artificial intelligence in real-world environments.
+DAVID AI Labs is the public engineering initiative
+of DAVID AI, an AI strategy and engineering firm.
 
-## Engineering Disciplines
+We develop and share technical research, reproducible
+experiments, reference architectures, and open-source
+tools for building reliable AI systems.
 
-**Agent Reliability & Evaluation**
-Testing, validation, failure analysis, and performance measurement.
-
-**Enterprise AI Architecture**
-Integration, orchestration, infrastructure, and production design.
-
-**AI Governance**
-Human oversight, reversibility, authorization, and operational controls.
-
-**Engineering Benchmarks**
-Reproducible evaluations of models, systems, and architectural approaches.
-
-**Open Engineering**
-Reference implementations, reusable components, and shared technical knowledge.
-
-## Our Approach
-
-Every published experiment should include:
-
-1. A clearly defined research question
-2. Documented methodology
-3. Reproducible implementation
-4. Measured results
-5. Known limitations
-6. Engineering implications
-
-We publish evidence that can be examined, challenged, and reproduced.
-
-## DAVID AI
-
-**World-Class AI Strategy & Engineering**
-
-[Website](https://david.partners) | [Engineering Organization](https://github.com/david-ai-labs)
+[**DAVID AI**](https://david.partners) ·
+[**Research & Insights**](https://david.partners/research)
 
 ---
 
-DAVID AI Labs
+## Our Engineering Disciplines
+
+### 01 / Agent Systems
+Architecture, orchestration, execution, and
+production agent development.
+
+### 02 / Evaluation & Reliability
+Testing methods, benchmarks, failure analysis,
+and performance measurement.
+
+### 03 / Enterprise Architecture
+Integration patterns, infrastructure, system
+design, and production engineering.
+
+### 04 / Governance & Control
+Human oversight, authorization, reversibility,
+security, and operational safeguards.
+
+---
+
+## Open-Source Projects
+
+Our public projects explore practical challenges
+in enterprise AI engineering.
+
+### [Agent Evaluations](https://github.com/david-ai-labs/agent-evals)
+Evaluation frameworks for enterprise AI agents.
+
+### [Agent Governance](https://github.com/david-ai-labs/agent-governance)
+Engineering patterns for controlled agent execution.
+
+### [Reference Architectures](https://github.com/david-ai-labs/reference-architectures)
+Practical implementation patterns for AI systems.
+
+Repositories are works in progress. Published
+experiments will include documented methodology,
+results, and limitations.
+
+---
+
+## Engineering Principles
+
+**Evidence before conclusions.**
+Document assumptions and validate claims.
+
+**Reproducibility by design.**
+Publish the methods required to repeat experiments.
+
+**Production as the standard.**
+Evaluate reliability, security, integration,
+and operational constraints.
+
+**Open technical discourse.**
+Encourage scrutiny, discussion, and contributions.
+
+---
+
+## Contributing
+
+We welcome constructive technical discussion
+and contributions to our public projects.
+
+Review the contribution guidelines in each
+repository before submitting changes.
+
+---
+
+**DAVID AI**
+
+*World-Class AI Strategy & Engineering*
+
+[Website](https://david.partners) ·
+[GitHub](https://github.com/david-ai-labs)
+EOF
+
+git add profile/README.md
+git commit -m "Refine DAVID AI Labs organization profile"
+git push
+
+echo "Profile README updated."
+echo "https://github.com/david-ai-labs"
